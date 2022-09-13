@@ -30,14 +30,14 @@ menu {
   flex-direction: column;
   align-items: center;
   background: rgb(75, 79, 80);
-  background: radial-gradient(
-    circle,
-    rgba(75, 79, 80, 0.9) 0%,
-    rgba(54, 62, 64, 1) 52%,
-    rgba(75, 79, 80, 1) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(75, 79, 80, 0.9) 0%,
+      rgba(54, 62, 64, 1) 52%,
+      rgba(75, 79, 80, 1) 100%);
   height: 100vh;
   color: #fff;
+  box-shadow: 5px -5px 15px rgba(0, 0, 0, .5);
+  z-index: 1;
 }
 
 .logo {
@@ -82,9 +82,11 @@ menu {
 
 .data {
   background: rgba(255, 255, 255, 0.8);
+  /* align-items: center; */
   /* padding: 3rem; */
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 .data .date {
@@ -96,7 +98,7 @@ menu {
 
 .data .totals {
   display: flex;
-  width: 100%;
+  /* min-width: 900px; */
   justify-content: space-between;
   margin: 2rem 0;
   padding: 0 4rem;
@@ -107,7 +109,7 @@ menu {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 220px;
+  width: 200px;
   padding: 2rem;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.4);
@@ -115,6 +117,7 @@ menu {
   user-select: none;
   transition: all 0.5s;
 }
+
 .data .totals .label,
 .amount {
   text-align: center;
@@ -126,6 +129,7 @@ menu {
 .red {
   color: rgb(196, 21, 21);
 }
+
 .green {
   color: rgb(38, 175, 25);
 }
@@ -133,4 +137,18 @@ menu {
 .data .totals .top-container:hover {
   background: rgba(255, 255, 255, 0.8);
   transform: translateY(-3px);
+}
+
+.monthly-data {
+  padding-left: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.monthly-data span {
+  text-transform: none;
 }
